@@ -76,10 +76,8 @@ void subset(int sum, int k, int n){
         if(sum+w[i]<=d){
             x[i] = 1;
             subset(sum+w[i], i+1, n);
-            x[i] = 0
-;        }
+            x[i] = 0;        }
     }
-    
     
 }
 
