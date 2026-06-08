@@ -51,44 +51,89 @@
 
 
 
+// #include<stdio.h>
+
+// int max(int a, int b ){
+//     return (a>b)? a:b;
+// }
+
+// int knapsack(int n, int w[10], int p[10], int m){
+//     if(n == 0 || m == 0){
+//         return 0;
+//     }
+
+//     if(w[n-1]>m){
+//         return knapsack(n-1,w,p,m);
+//     }else{
+//         return max(knapsack(n-1,w,p,m), knapsack(n-1,w,p,m-w[n-1])+p[n-1]);
+//     }
+// }
+
+// int main(){
+//     int n, w[10], p[10], m;
+
+//     printf("Enter the total number of the items: ");
+//     scanf("%d", &n);
+
+//     printf("Enter the weight of the items: ");
+//     for(int i = 0; i<n; i++){
+//         scanf("%d", &w[i]);
+//     }
+//     printf("Profit of the items: ");
+//     for(int i = 0; i<n; i++){
+//         scanf("%d", &p[i]);
+//     }
+
+//     printf("Enter the cpacity of the knpasack: ");
+//     scanf("%d", &m);
+
+//     int res = knapsack(n,w,p,m);
+
+//     printf("Result is : %d\t", res);
+//     return 0;
+// }
+
+
+// -------------------------------------practice
+
+
 #include<stdio.h>
 
-int max(int a, int b ){
-    return (a>b)? a : b;
+int max(int a, int b){
+    return (a>b)? a: b;
 }
 
 int knapsack(int n, int w[10], int p[10], int m){
-    if(n == 0 || m == 0){
-        return 0;
-    }
+        if(n == 0 || m == 0){
+            return 0;
+        }
 
-    if(w[n-1]>m){
-        return knapsack(n-1,w,p,m);
-    }else{
-        return max(knapsack(n-1,w,p,m), knapsack(n-1,w,p,m-w[n-1])+p[n-1]);
-    }
+        if(w[n-1]>m){
+            return knapsack(n-1,w,p,m);
+        }else{
+            return max(knapsack(n-1,w,p,m) , knapsack(n-1,w,p,m-w[n-1])+p[n-1]);
+        }
 }
 
-int main(){
-    int n, w[10], p[10], m;
 
-    printf("Enter the total number of the items: ");
+
+int main(){
+    int n,w[10],p[10], m;
+
+    printf("Enter the no of items : ");
     scanf("%d", &n);
 
-    printf("Enter the weight of the items: ");
+    printf("Enter the weights and profit: ");
     for(int i = 0; i<n; i++){
-        scanf("%d", &w[i]);
-    }
-    printf("Profit of the items: ");
-    for(int i = 0; i<n; i++){
-        scanf("%d", &p[i]);
+        scanf("%d %d", &w[i], &p[i]);
     }
 
-    printf("Enter the cpacity of the knpasack: ");
+    printf("Enter the capacity: ");
     scanf("%d", &m);
 
     int res = knapsack(n,w,p,m);
+    printf(" result is %d", res);
 
-    printf("Result is : %d\t", res);
+
     return 0;
 }
