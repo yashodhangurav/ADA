@@ -21,6 +21,13 @@ a.out
 /warshalls
 /tempCodeRunnerFile
 
+# Ignore any other compiled/generated files in this folder
+*
+!*.c
+!*.h
+!README*
+!.gitignore
+
 # Ignore macOS debug symbol directories
 *.dSYM/
 *.dSYM

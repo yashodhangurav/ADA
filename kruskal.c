@@ -293,7 +293,6 @@ int main(){
                 }
             }
         }
-
         while(parent[u]){
             u = parent[u];
         }
