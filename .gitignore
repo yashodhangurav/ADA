@@ -1,6 +1,17 @@
 # Ignore all .exe files
 *.exe
 
+# Ignore compiled C/C++ objects and binaries
+*.o
+*.out
+*.obj
+a.out
+
 # Ignore macOS debug symbol directories
 *.dSYM/
 *.dSYM
+
+# Ignore editor and system temporary files
+*.swp
+*~
+.DS_Store
