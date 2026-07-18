@@ -6,6 +6,20 @@
 *.out
 *.obj
 a.out
+*.bin
+
+# Ignore generated executable files without extensions
+/kruskal
+/9th_selectionSort
+/10th_quickSort
+/11th_mergeSort
+/dijkstras
+/floyds
+/knapsackGreedy
+/knapsackZeroOne
+/SumOfSubset
+/warshalls
+/tempCodeRunnerFile
 
 # Ignore macOS debug symbol directories
 *.dSYM/
