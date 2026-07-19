@@ -165,20 +165,123 @@
 // ----------------------------------------------------------practice
 
 
+// #include<stdio.h>
+
+// int w[10], x[10], d, count = 0;
 
 
+// void subset(int sum , int k, int n){
+//     if(sum == d){
+//         printf("Subset %d", ++count);
+
+//         for(int i = 0; i<n; i++){
+//             if(x[i]==1){
+//                 printf("%d\t", w[i]);
+//             }
+//         }
+//         printf("\n");
+//     }
+
+//     for(int i = k; i<n; i++){
+//         if(sum+w[i]<=d){
+//             x[i] = 1;
+//             subset(sum+w[i], i+1, n);
+//             x[i] = 0;
+//         }
+//     }
+// }
+
+// int main(){
+
+//     int n;
+
+
+//     printf("enter the total elements : ");
+//     scanf("%d", &n);
+
+
+//     printf("enter the elements :");
+//     for(int i = 0; i<n; i++){
+//         scanf("%d", &w[i]);
+//     }
+
+//     printf("enter the required sum : ");
+//     scanf("%d", &d);
+
+//     subset(0,0,n);
+//     if(count == 0){
+//         printf("no subset");
+//     }
+
+
+//     return 0;
+// }
+
+// ----------------------------------------------------------practice--
+
+
+// #include<stdio.h>
+
+// int w[10], x[10], d, count = 0;
+
+// void subset(int sum, int k, int n){
+//     if(sum == d){
+//         printf("subset : %d\n", ++count);
+
+//             for(int i = 0; i<n; i++){
+//             if(x[i] == 1){
+//                 printf("%d\t", w[i]);
+//             }
+//         }
+//                printf("\n");
+//     }
+   
+
+//     for(int i = k; i<n; i++){
+//         if(sum + w[i] <= d){
+//             x[i] = 1;
+//             subset(sum+w[i], i+1, n);
+//             x[i] = 0;
+//         }
+//     }
+// }
+
+// int main(){
+//     int n;
+
+//     printf("Enter the total number of elements : ");
+//     scanf("%d", &n);
+
+//     printf("Enter the elements : ");
+//     for(int i = 0; i<n; i++){
+//        scanf("%d", &w[i]);
+//     }
+
+//     printf("Enter the required sum : ");
+//     scanf("%d", &d);
+
+//     subset(0,0,n);
+//     if(count == 0){
+//         printf("No subset");
+//     }
+
+//     return 0;
+// }
+
+
+// ----------------------------------------------------------practice--
 
 #include<stdio.h>
 
 int w[10], x[10], d, count = 0;
 
 
-void subset(int sum , int k, int n){
+void subset(int sum, int k, int n){
     if(sum == d){
-        printf("Subset %d", ++count);
+        printf("Subset: %d:\t ", ++count);
 
         for(int i = 0; i<n; i++){
-            if(x[i]==1){
+            if(x[i] == 1){
                 printf("%d\t", w[i]);
             }
         }
@@ -186,7 +289,7 @@ void subset(int sum , int k, int n){
     }
 
     for(int i = k; i<n; i++){
-        if(sum+w[i]<=d){
+        if(sum+w[i] <= d){
             x[i] = 1;
             subset(sum+w[i], i+1, n);
             x[i] = 0;
@@ -197,25 +300,20 @@ void subset(int sum , int k, int n){
 int main(){
 
     int n;
-
-
-    printf("enter the total elements : ");
+    printf("Enter the total number : ");
     scanf("%d", &n);
 
-
-    printf("enter the elements :");
+    printf("Enter the elements : ");
     for(int i = 0; i<n; i++){
-        scanf("%d", &w[i]);
+            scanf("%d", &w[i]);
     }
-
-    printf("enter the required sum : ");
+    printf("Enter required sum : ");
     scanf("%d", &d);
 
     subset(0,0,n);
     if(count == 0){
-        printf("no subset");
+        printf("No subset");
     }
-
 
     return 0;
 }
