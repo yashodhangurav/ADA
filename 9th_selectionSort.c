@@ -114,7 +114,47 @@
 // }
 
 
-//----------------------------------------------------practice---------------
+//----------------------------------------------------practice---------------------------
+
+
+// #include<stdio.h>
+
+
+// void selectionSort(int arr[], int n){
+//     for(int i = 0; i<n-1; i++){
+//         int minIdx = i;
+//         for(int j = i+1; j<n; j++){
+//             if(arr[j]<arr[minIdx]){
+//                 minIdx = j;
+//             }
+//         }
+//         int temp = arr[i];
+//         arr[i] = arr[minIdx];
+//         arr[minIdx] = temp;
+//     }
+
+// }
+//  void print(int arr[], int n){
+//     for(int i = 0; i<n; i++){
+//         printf("%d, ", arr[i]);
+//     }
+//  }
+
+// int main(){
+
+//     int arr[]={4,5,2,3,1,7};
+
+//     int n = sizeof(arr)/sizeof(int);
+
+//     selectionSort(arr,n);
+
+//     print(arr,n);
+    
+//     return 0;
+// }
+
+
+//----------------------------------------------------practice---------------------------
 
 
 #include<stdio.h>
@@ -124,7 +164,7 @@ void selectionSort(int arr[], int n){
     for(int i = 0; i<n-1; i++){
         int minIdx = i;
         for(int j = i+1; j<n; j++){
-            if(arr[j]<arr[minIdx]){
+            if(arr[j] < arr[minIdx]){
                 minIdx = j;
             }
         }
@@ -132,24 +172,21 @@ void selectionSort(int arr[], int n){
         arr[i] = arr[minIdx];
         arr[minIdx] = temp;
     }
-
 }
 
- void print(int arr[], int n){
+void print(int *arr, int n){
     for(int i = 0; i<n; i++){
         printf("%d, ", arr[i]);
     }
- }
+}
 
 int main(){
 
-    int arr[]={4,5,2,3,1,7};
-
+    int arr[] = {4,6,2,3,1,5};
     int n = sizeof(arr)/sizeof(int);
 
-    selectionSort(arr,n);
+    selectionSort(arr, n);
+    print(arr, n);
 
-    print(arr,n);
-    
     return 0;
 }

@@ -178,24 +178,83 @@
 
 // -------------------------------------------Practice--------------------------------
 
+// #include<stdio.h>
+
+// int main(){
+
+//     float w[10], p[10], r[10],capacity, total_val = 0;
+//     int n;
+
+
+//     printf("Enter the total number of the items : ");
+//     scanf("%d", &n);
+
+//     printf("Enter the weight and profit of the items : ");
+//     for(int i = 0; i<n; i++){
+//         scanf("%f %f", &w[i], &p[i]);
+//         r[i] = p[i]/w[i];
+//     }
+
+//     printf("Enter the capacity of the knapsack: ");
+//     scanf("%f", &capacity);
+
+//     for(int i = 0; i<n-1; i++){
+//         for(int j = i+1; j<n; j++){
+//             if(r[i]<r[j]){
+//                 float temp = r[i];
+//                 r[i] = r[j];
+//                 r[j] = temp;
+
+//                 temp = w[i];
+//                 w[i] = w[j];
+//                 w[j] = temp;
+
+//                 temp = p[i];
+//                 p[i] = p[j];
+//                 p[j] = temp; 
+//             }
+//         }
+//     }
+    
+//     for(int i = 0; i<n; i++){
+//         if(w[i] <= capacity){
+//             total_val += p[i];
+//             capacity -= w[i];
+//         }else{
+//             total_val += r[i]*capacity;
+//             break;
+//         }
+//     }
+
+//     printf("The total prifit is %.2f", total_val);
+
+//     return 0;
+// }
+
+
+// -------------------------------------------Practice--------------------------------
+
+
 #include<stdio.h>
 
 int main(){
 
-    float w[10], p[10], r[10],capacity, total_val = 0;
+    float w[10], p[10], r[10], capacity, total_val = 0;
     int n;
 
-
-    printf("Enter the total number of the items : ");
+    printf("Enter the number of the items : ");
     scanf("%d", &n);
 
-    printf("Enter the weight and profit of the items : ");
-    for(int i = 0; i<n; i++){
-        scanf("%f %f", &w[i], &p[i]);
-        r[i] = p[i]/w[i];
+    printf("Enter the weight and profit :  "){
+        for(int i = 0; i<n; i++){
+                    scanf("%f %f", &w[i], &p[i]);
+                    r[i] = p[i]/w[i];
+                }
     }
+        
+    
 
-    printf("Enter the capacity of the knapsack: ");
+    printf("Enter the capacity : ");
     scanf("%f", &capacity);
 
     for(int i = 0; i<n-1; i++){
@@ -211,13 +270,13 @@ int main(){
 
                 temp = p[i];
                 p[i] = p[j];
-                p[j] = temp; 
+                p[j] = temp;
             }
         }
     }
-    
+
     for(int i = 0; i<n; i++){
-        if(w[i] <= capacity){
+        if(w[i]<=capacity){
             total_val += p[i];
             capacity -= w[i];
         }else{
@@ -225,8 +284,6 @@ int main(){
             break;
         }
     }
-
-    printf("The total prifit is %.2f", total_val);
 
     return 0;
 }
